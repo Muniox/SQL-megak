@@ -1,0 +1,3 @@
+Każde zapytanie które ma na celu utworzenie nowego rekordy(encji) zwraca nam jego identyfikator w tabeli(id).
+
+Potocznie rzecz ujmując możemy zwrócić go od razu bo wiemy po czym go szukać :)
