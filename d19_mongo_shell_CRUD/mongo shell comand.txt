@@ -1,0 +1,61 @@
+use megak_music
+
+db.createCollection('songs')
+
+db.songs.insert(
+	{
+	name: 'Vagarant',
+	artist: 'IForgot',
+	length: '300'
+	}
+);
+
+db.songs.find();
+db.songs.findOne();
+db.songs.find({
+	artist: 'IForgot
+})
+
+Operatory porównania 
+
+.find({
+	age: {$eq: 100},
+})
+
+skrótowy zapis:
+
+.find({
+	age: 100,
+})
+
+Operatory porównania:
+= $eq
+<> $ne
+> $gt
+< $lt
+>= $gte
+<= $lte
+
+db.songs.find({length: { $gt: 250 } })
+do.songs.find({length: { $gt: 200, $lt: 250 } })
+
+Operatory logiczne:
+find({
+	$and: [
+		{name: "Kuba"},
+		{lastName: "Król"},
+	]
+})
+
+skrót:
+find({
+	name: "Kuba",
+	lastName: "Król",
+})
+
+$and: [{},{}...],
+$or: [{},{}....],
+$not: {},
+
+
+db.songs.find({$or: [{artist: 'Sokół'}, {length { $gt: 250} }})

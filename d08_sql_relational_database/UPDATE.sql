@@ -1,0 +1,1 @@
+UPDATE `cars` SET `color` = 'myBlack' WHERE `registrationNo` = 'SJZ442H' 

@@ -1,0 +1,6 @@
+-- Quiz
+-- SELECT * FROM `tabela` WHERE `product` LIKE 'Turbo%';
+-- SELECT * FROM `tabela` WHERE `product` LIKE '%tekst%';
+-- SELECT * FROM `tabela` WHERE `product` LIKE '%ABC__FG%'
+-- SELECT * FROM `tabela` WHERE `product` LIKE 'ma%'
+-- SELECT * FROM `tabela` WHERE `product` LIKE '_im%'

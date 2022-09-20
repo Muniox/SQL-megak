@@ -1,0 +1,3 @@
+-- SELECT * FROM `cars` WHERE `brand` = 'BMW';
+-- SELECT * FROM `cars` WHERE `brand` <> 'BMW';
+-- SELECT `brand`, `model` FROM `cars` WHERE `registrationNo` = 'WML11135';

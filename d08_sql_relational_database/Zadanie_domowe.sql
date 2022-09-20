@@ -1,0 +1,3 @@
+-- UPDATE `cars` SET `color` = 'white metalic' WHERE `price` < 100000;
+-- UPDATE `cars` SET `color` = 'black metalic', `firstRegistrationAt` = CURRENT_TIMESTAMP() WHERE `price` < 100000;
+-- DELETE FROM `cars` WHERE `price` < 100000

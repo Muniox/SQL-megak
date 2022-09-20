@@ -1,0 +1,2 @@
+-- UPDATE `cars` SET `price` = `price` * 1.2;
+-- UPDATE `cars` SET `price` = `price` * 0.8 WHERE `price` > 100000;

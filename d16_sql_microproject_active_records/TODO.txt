@@ -1,0 +1,11 @@
+1. Stwórz aplikację Expresową, która ma EndPoint zgodne z REST!
+2. To co zrobiliśmy na części wspólnej przepisz i dodaj do aplikacji Expresowej
+3. Stworz stronę główną - z listą rzeczy do zrobienia
+4. Każdy element ma przycisk do usunięcia
+5. Na dole znajduje się formularz, który dodaje nową rzecz do zrobienia
+
+* Kolejność powinna być taka, w jakiej się dodało.
+** Pamiętaj o minimalnej walidacji - przy dodawaniu długości, a przy usuwaniu czy istnieje ID
+
+PS. Zerknij tu: Etap 3 - tydzień 5 - dzień 5
+

@@ -1,0 +1,1 @@
+SELECT `firstName`, `lastName` FROM `students`

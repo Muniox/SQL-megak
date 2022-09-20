@@ -1,0 +1,57 @@
+usuwanie:
+
+db.nazwaBazy.deleteOne(query)
+db.nazwaBazy.deleteMany(query)
+
+db.songs.deleteOne({_id: ObjectId("costam")})
+
+podmiana:
+
+db.nazwaBazy.replaceOne(query, nowyDokument)
+
+db.nazwaBazy.replaceMany(query, nowyDokument)
+przy replace musimy podać wszystkie informacje bo inaczej pozostałe zostaną usunięte
+db.songs.replaceOne({_id : ObjectId("xxx")}, {length: 250} )
+
+
+aktualizacje zaawansowane:
+
+db.nazwaBazy.updateOne(query, aktualizacje)
+db.nazwaBazy.updateMany(query, aktualizacje)
+
+db.nazwaBazy.updateOne({_id: ObjectId{'xx'}, {
+	$set: {
+		isActive : true
+	}
+})
+
+inkrementacja/dekrementacja
+
+$inc: { length: 10,}
+
+//doda 10 
+db.songs.updateOne({_id : ObjectId('xxx') },{
+	length: 10
+})
+
+odwrotnością będzie -10
+
+Usunięcie pola:
+$unset: { pole : "", ... }
+
+Ustawiamy pole:
+$set: { pole : "wartość", ... }
+
+aktualna data:
+db.songs.updateMany({_id : ObjectId('xxx')}, {
+	$set: { 
+		artist : 'Feint'
+	},
+	$currentDate: {
+		updateAt : true,
+	}
+})
+
+
+Zadania:
+

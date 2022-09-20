@@ -1,0 +1,3 @@
+-- UPDATE cars SET cars.placeId = 'c8a5614d-2f8e-11ed-9cad-50ebf64adf2b' WHERE cars.registrationNo = 'WML11135'
+-- UPDATE cars SET cars.placeId = '21f8a26b-2f8a-11ed-9cad-50ebf64adf2b' WHERE cars.registrationNo = 'DW1001A' OR cars.registrationNo = 'SJZ442H'
+-- SELECT registrationNo, brand, model FROM cars WHERE price > 100000

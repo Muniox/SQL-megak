@@ -1,0 +1,13 @@
+{
+  "name": "d17b_mongo_non_relational_database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mongo": "cd /d C:\\Program Files\\MongoDB\\Server\\5.0\\bin && mongod.exe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

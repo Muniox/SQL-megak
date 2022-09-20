@@ -1,0 +1,2 @@
+-- SELECT * FROM `students` JOIN `courses` ON `students`.`courseName` = `courses`.`name`;
+-- SELECT * FROM `courses` JOIN `students` ON `students`.`courseName` = `courses`.`name`
