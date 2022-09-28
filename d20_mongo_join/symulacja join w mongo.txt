@@ -1,0 +1,21 @@
+db.nazwaTabeli.aggregate([{
+	$lookup: {
+		from: <collection to join>,
+		localField: <field from the input documents>,
+		foreignField: <field from the documents of the "form" collection>,
+		as: <output array field>,
+	}
+
+}]);
+
+Przykład:
+
+db.songs.aggregate([{
+	$lookup: {
+		from: 'artist',
+		localField: 'artistId',
+		foreignField: '_id',
+		as: 'artist',
+	}
+
+}]);

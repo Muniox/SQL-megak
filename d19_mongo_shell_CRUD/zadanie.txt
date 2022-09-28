@@ -1,0 +1,16 @@
+use megak_music;
+
+db.songs.deleteMany({
+	startAt: {
+		$lt: new Date('1921-12-15'),
+	},
+});
+
+
+powiązanie (utworzenie relacji):
+
+db.songs.updateOne({
+	$set: {
+		artistId: ObjectId('632e2d9418c3b46235fda37c'),
+	},
+})
