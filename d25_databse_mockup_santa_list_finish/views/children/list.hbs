@@ -1,0 +1,26 @@
+<h2>Lista dzieci</h2>
+
+<ul>
+    {{#each childrenList}}
+        <li>
+            <label>
+                {{this.name}} 
+                <select name="" id="">
+                    <option value="">brak</option>
+                    {{!-- {{log giftList}} --}}
+                    {{#each ../giftList}}
+                        <option value="{{this.name}}">{{this.name}}</option>
+                    {{/each}}
+                </select>
+                <button>Zapisz</button>
+            </label>
+        </li>
+    {{/each}}
+</ul>
+
+<h2>Dodaj dziecko do listy</h2>
+<form action="/child" method="post">
+    <label for="name">Imię</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Dodaj</button>
+</form>
