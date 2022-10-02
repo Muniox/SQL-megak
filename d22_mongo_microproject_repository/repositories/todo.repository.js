@@ -36,7 +36,8 @@ class TodoRepository {
     }
 
     static async findAll() {
-        return (await todos.find()).toArray();
+        const allTodos = await todos.find().toArray();
+        return allTodos.map(obj => new TodoRecord(obj));
     }
 
     static async update(record) {
