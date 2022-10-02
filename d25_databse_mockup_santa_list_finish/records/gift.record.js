@@ -1,4 +1,4 @@
-const { ValidationError } = require("webpack");
+const { ValidationError } = require("../utils/error");
 const { pool } = require("../utils/db");
 const { v4: uuid } = require("uuid");
 
@@ -32,10 +32,28 @@ class GiftRecord {
 
     static async listAll() {
         const [results] = await pool.execute('SELECT * FROM `gifts`');
-        return results;
+        return results.map(obj => new GiftRecord(obj));
     }
 
-    
+    static async getOne(id) {
+        const [result] = await pool.execute('SELECT * FROM `gifts` WHERE `gifts`.`id` = :id', {
+            id,
+        });
+        return result.length === 0 ? null : new GiftRecord(result[0]);
+    }
+
+    async countGivenGifts() {
+        // const answer = await pool.execute('SELECT COUNT(*) AS `count` FROM `children` WHERE `giftId` = :id', {
+        //     id: this.id
+        // });
+        //
+        // return answer[0][0].count;
+
+        const [[{count}]] = await pool.execute('SELECT COUNT(*) AS `count` FROM `children` WHERE `giftId` = :id', {
+            id: this.id
+        });
+        return count;
+    }
 }
 
 

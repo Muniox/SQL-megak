@@ -8,6 +8,7 @@ const { handleError } = require("./utils/error");
 const { homeRouter } = require("./routers/home");
 const { childRouter } = require("./routers/child");
 const { giftRouter } = require("./routers/gift");
+const { handlebarsHelpers } = require("./utils/handlebars-helpers");
 
 
 const app = express();
@@ -22,7 +23,7 @@ app.use(express.static('public'));
 app.use(express.json());
 app.engine('hbs', engine({
     extname: '.hbs',
-    // helpers: handlebarsHelpers
+    helpers: handlebarsHelpers, //dodatkowe funkcjonalności, które chcemy dodać do Handlebarsów
 }));
 app.set('view engine', 'hbs');
 
